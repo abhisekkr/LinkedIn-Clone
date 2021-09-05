@@ -1,0 +1,88 @@
+.widget {
+	top: 80px;
+	flex: 0.3;
+	border-radius: 10px;
+	height: fit-content;
+}
+.widget__top {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	background-color: white;
+	border: 1px solid lightgray;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.widget__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.widget__header > h2 {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.widgets__article {
+	display: flex;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.widgets__article:hover {
+	background-color: whitesmoke;
+}
+
+.widgets__articleLeft {
+	color: #0177b7;
+	margin-right: 5px;
+}
+
+.widgets__articleLeft > .MuiSvgIcon-root {
+	font-size: 15px;
+}
+
+.widgets__articleRight {
+	flex: 1;
+}
+
+.widgets__articleRight > h4 {
+	font-size: 14px;
+}
+
+.widgets__articleRight > p {
+	font-size: 12px;
+	color: gray;
+}
+
+.widget__bottom {
+	display: flex;
+	position: sticky;
+	flex-direction: column;
+	align-items: left;
+	background-color: white;
+	border: 1px solid lightgray;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.widget__bottomHeader > h2 {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.widget__bottomHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.widget__bottomImage {
+	object-fit: contain;
+}

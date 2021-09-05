@@ -1,0 +1,93 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	display: flex;
+	justify-content: space-evenly;
+	border-bottom: 0.1px solid lightgray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100vw;
+	background-color: white;
+}
+.header__left {
+	display: flex;
+}
+
+.header__left > img {
+	object-fit: contain;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.header__search {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	height: 22px;
+	color: gray;
+	background-color: #eef3f8;
+	width: 350px;
+}
+
+.header__search > input {
+	outline: none;
+	border: none;
+	background: none;
+}
+
+.header__right {
+	display: flex;
+}
+
+.vertical {
+	border-right: 0.1px solid lightgray;
+	height: 40px;
+	margin-right: 20px;
+	margin-left: 5px;
+}
+
+.active__element {
+	border-bottom: 3px solid #0a66c2;
+	transition: border-bottom 0.5s ease-in-out;
+}
+
+.signOut__modal {
+	top: 34px;
+	right: 170px;
+	position: absolute;
+	z-index: 9999;
+	border: 1px solid lightgrey;
+	border: radius 4px;
+	padding: 8px;
+	font-size: 13px;
+	width: 60px;
+	color: white;
+	text-align: center;
+	background-color: #0177b7;
+	opacity: 0;
+}
+.header__right > .me > .signOut__modal:hover {
+	opacity: 1;
+	transition: 1s;
+}
+
+.header__right > .me {
+	display: flex;
+	flex-direction: column;
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+.me > .me__avatar {
+	object-fit: contain;
+	height: 24.5px;
+	width: 24.5px;
+}
+
+.me > p {
+	font-size: 12px;
+	text-align: center;
+	color: gray;
+}
