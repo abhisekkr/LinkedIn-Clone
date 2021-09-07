@@ -58,7 +58,7 @@ function Post({
 
 	useEffect(() => {
 		window.localStorage.setItem({ message }, likes);
-	}, [likes]);
+	}, [likes, message]);
 
 	return (
 		<div className="post">

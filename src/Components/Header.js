@@ -16,10 +16,23 @@ import smallLogo from "../Images/174857.png";
 import { Avatar } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 function Header() {
 	const dispatch = useDispatch();
 	const user = useSelector(selectUser);
+
+	const [anchorEl, setAnchorEl] = React.useState(null);
+
+	const handleClick = (event) => {
+		setAnchorEl(event.currentTarget);
+	};
+
+	const handleClose = () => {
+		setAnchorEl(null);
+	};
+
 	const logoutOfApp = () => {
 		dispatch(logout());
 		auth.signOut();
@@ -41,11 +54,26 @@ function Header() {
 				<HeaderOption Icon={ChatIcon} title="Messaging" />
 				<HeaderOption Icon={NotificationsIcon} title="Notifications" />
 				<div className="me">
-					<Avatar className="me__avatar">{user?.displayName[0]}</Avatar>
+					<Avatar onClick={handleClick} className="me__avatar">
+						{user?.displayName[0]}
+					</Avatar>
 					<p>Me</p>
-					<div className="signOut__modal">
-						<p onClick={logoutOfApp}>SignOut</p>
-					</div>
+					<Menu
+						style={{ marginTop: "35px" }}
+						id="simple-menu"
+						anchorEl={anchorEl}
+						open={Boolean(anchorEl)}
+						onClose={handleClose}>
+						<MenuItem onClick={handleClose}>Profile</MenuItem>
+						<MenuItem onClick={handleClose}>My account</MenuItem>
+						<MenuItem
+							onClick={() => {
+								handleClose();
+								logoutOfApp();
+							}}>
+							Logout
+						</MenuItem>
+					</Menu>
 				</div>
 				<div className="vertical" />
 				<HeaderOption Icon={AppsIcon} title="Work" />

@@ -47,6 +47,7 @@
 	background-color: #0074b1;
 	border-radius: 50px;
 	border: none;
+	cursor: pointer;
 }
 
 .login__register {

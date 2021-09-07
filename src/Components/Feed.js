@@ -99,7 +99,7 @@ function Feed() {
 		<div className="feed">
 			<div className="feed__inputContainer">
 				<div className="feed__input">
-					<Avatar src="https://lh3.googleusercontent.com/ogw/ADea4I6HPtwmbVbs6f28UonZinHbjkWTJ8po7DiYj5cS_g=s32-c-mo"></Avatar>
+					<Avatar>{user?.displayName[0]}</Avatar>
 					<form>
 						<input ref={inputRef} type="text" placeholder="Start a Post" />
 						<button onClick={sendPost} type="submit">

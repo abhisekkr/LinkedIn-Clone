@@ -53,26 +53,6 @@
 	transition: border-bottom 0.5s ease-in-out;
 }
 
-.signOut__modal {
-	top: 34px;
-	right: 170px;
-	position: absolute;
-	z-index: 9999;
-	border: 1px solid lightgrey;
-	border: radius 4px;
-	padding: 8px;
-	font-size: 13px;
-	width: 60px;
-	color: white;
-	text-align: center;
-	background-color: #0177b7;
-	opacity: 0;
-}
-.header__right > .me > .signOut__modal:hover {
-	opacity: 1;
-	transition: 1s;
-}
-
 .header__right > .me {
 	display: flex;
 	flex-direction: column;
