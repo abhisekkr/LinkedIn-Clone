@@ -1,6 +1,6 @@
 # LinkedIn Clone
 
-LinkedIn Clone made uisng React , Redux for state management , and Firebase for Backend , Abiliy to make Post like LinkedIn such as Text with Media and Like and comment functionality.
+LinkedIn Clone made using React , Redux for state management , and Firebase for Backend , Ability to make Post like LinkedIn such as Text with Media and Like and comment functionality.
 ## Project Overview
  - Guest Login email --> abhi@test.com
  - Guest Login Password --> 123456
